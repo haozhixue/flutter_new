@@ -4,34 +4,35 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(
-    MaterialApp(
-      home: MyStatefulWidget(),
-      debugShowCheckedModeBanner: false,
-    ),
-  );
+  runApp(MaterialApp(
+    home: _NameState(),
+    debugShowCheckedModeBanner: false,
+  ));
 }
 
-//创建一个有状态组件
-class MyStatefulWidget extends StatefulWidget {
+class _NameState extends StatefulWidget {
+  const _NameState({super.key});
+
+
+
+
   @override
-  _MyStatefulWidgetState createState() => _MyStatefulWidgetState();
+  State<_NameState> createState() => __NameStateState();
 }
 
-class   _MyStatefulWidgetState extends State<MyStatefulWidget> {
-
+class __NameStateState extends State<_NameState> {
+  @override
+  void initState() {
+    super.initState();
+  }
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        appBar: AppBar(title: Text('头部区域')),
-        body: Container(child: Center(child: Text("中间区域"))),
-        bottomNavigationBar: Container(
-          height: 80.0,
-          child: Center(child: Text("底部区域2")),
-        ),
-      );
+    return Container(child: Text('woshis2222222hu2222jv '),);
+  }
+
+  @override
+  void didChangeDependencies() {
+    // TODO: implement didChangeDependencies
+    super.didChangeDependencies();
   }
 }
-
-//statefulw
-//statelessw
