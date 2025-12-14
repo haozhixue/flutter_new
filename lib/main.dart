@@ -5,34 +5,33 @@ import 'package:flutter/material.dart';
 
 void main() {
   runApp(MaterialApp(
-    home: _NameState(),
+    home: Name(),
     debugShowCheckedModeBanner: false,
   ));
 }
+class Name extends StatelessWidget {
+  const Name({super.key});
 
-class _NameState extends StatefulWidget {
-  const _NameState({super.key});
-
-
-
-
-  @override
-  State<_NameState> createState() => __NameStateState();
-}
-
-class __NameStateState extends State<_NameState> {
-  @override
-  void initState() {
-    super.initState();
-  }
   @override
   Widget build(BuildContext context) {
-    return Container(child: Text('woshis2222222hu2222jv '),);
-  }
-
-  @override
-  void didChangeDependencies() {
-    // TODO: implement didChangeDependencies
-    super.didChangeDependencies();
+    return Container(child: GestureDetector(
+      onTap: () => {
+        print("onTap")
+      },
+      onDoubleTap: () => {
+        print("onDoubleTap")
+      },
+      child: Container(
+        width: 200,
+        height: 100,
+        color: Colors.amber,
+        alignment: Alignment.center,
+        child: Text('Hello'),
+      ),),);
   }
 }
+
+//TextButton ElevatedButton  OutlinedButton
+//GestureDetector
+
+
