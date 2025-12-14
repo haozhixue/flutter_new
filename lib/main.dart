@@ -19,7 +19,7 @@ void main() {
      bottomNavigationBar: Container(
       height: 50.0,
       child: Center(
-       child: Text("底部区域888888"),
+       child: Text("底部区域8888889"),
       ),
      ),
     ),
